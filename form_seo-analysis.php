@@ -55,7 +55,7 @@ Template Name: Form - SEO Analysis
 	
 	// 4) $api_key - Your unique SEMRush API key
 	//
-	$api_key	= '1f7bb889a0fbe5caddbabf4804ebdc1e';
+	$api_key	= '';
 	
 	// 5) $db - Database (for the moment can be: en, uk, ru, de, fr, es)
 	$db			= 'us';
