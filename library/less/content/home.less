@@ -1,0 +1,344 @@
+/******************************************************************************
+Site Name: WAXWINGLEGAL.COM
+Author: BOSWORTH
+
+Stylesheet: HOME 
+******************************************************************************/
+
+///////////////////////////////////////////////////////////////////////////////
+//  MIXINS
+///////////////////////////////////////////////////////////////////////////////
+
+@import "../_mixins.less";
+@import "../icons/font-awesome/font-awesome_mixins.less";
+@import "../icons/iconic-fill/iconic-fill_mixins.less";
+
+/*********************
+HOME BANNER
+*********************/
+
+#home-intro{
+	background: none !important;
+	padding:0;
+	position:relative;
+	z-index: 1;
+}
+
+#impact-slider{
+	border-bottom:10px solid @color-dark !important;
+
+	.slide{
+		position:relative;
+
+		.detail{
+			position:relative;
+			padding:50px 0;
+			z-index: 2;
+
+			@media @query-tablet{
+				position: absolute;
+				max-width:500px;
+				top:20%;
+				left:10%;
+				padding:0;
+			}
+
+			.light{
+
+			}
+		}
+
+		.img{
+			position: relative;
+			z-index: 1;	
+
+			@media @query-mobile {
+				display:none;
+			}
+
+			@media @query-tablet {
+				background: url("@{img_dir}banners/tablet_guy_1_1920x600px.jpg") no-repeat center center;
+				display:block;
+				height:525px;
+				.extend();				
+				.transition();
+			}
+
+		} // .img
+
+	} // .slide
+
+} //.#impact-slider
+
+/*********************
+CALL TO ACTION
+*********************/
+
+#home-calltoaction{ 
+	position:relative;
+	z-index: 10;
+
+	.inner{
+		@media @query-tablet {
+			height:0;
+		}
+	}
+}
+
+.calltoaction{
+	position:relative;
+	margin: 40px 0;		
+	text-align: center;
+	.colorbox(secondary; 5px);
+	.font-header(18px);
+
+	@media @query-tablet {
+		top:-60px;
+		margin:0 40px;
+	}
+
+	@media @query-widescreen {
+		top:-40px;
+	}
+
+	.text{
+		font-weight: 600;
+		margin:5px;
+		color:@color-lightest;
+		.text-shadow();
+		position:relative;
+		z-index: 2;
+	}
+
+	.big-form{
+		.input{
+			margin:6px ;
+			width:250px;
+		}
+	}
+
+	.button{
+		position:relative;
+		margin:6px;
+		z-index: 2;
+	}
+
+	.watermark{
+		.watermark(white);
+		position:absolute;
+		left:-4px;
+		top:-32px;
+	}
+
+}
+
+
+/*********************
+BIG IDEA
+*********************/
+
+#home-bigidea{
+	position: relative;
+	z-index: 5;
+}
+
+.big-idea{
+	background-color: @color-lightest;
+	height:225px;
+	.extend();
+
+	@media @query-tablet {
+		height:300px;
+	}
+
+	.example{
+		position:relative;
+		text-align: center;
+		top:60px;
+
+		@media @query-tablet {
+			top:120px;
+		}
+
+		span{
+			position:relative;
+			top:-25px;
+		}
+	}
+
+	.statement{
+		text-align: left;
+		position:relative;
+		top:50px;
+
+		@media @query-tablet {
+			top:80px;
+		}
+
+		p{
+			border-left:4px solid @color-primary;
+			padding-left:10px;
+			max-width: 520px;
+		}
+
+		ul {
+			max-width:520px;
+			margin-top:20px;
+
+			li {
+				text-align: right;
+				margin-bottom: 5px;
+
+				a{}
+			}
+		}
+	}
+}
+
+/*********************
+SERVICES
+*********************/
+
+#home-products-services{
+	position:relative;
+	z-index:1;
+}
+
+.products-services{
+	border-top:4px solid @color-secondary;
+	padding-top: 360px;
+	.extend();	
+
+	@media @query-tablet {
+		background: url("@{img_dir}offcenter_grey_gradient.jpg") no-repeat top center; 		
+		padding-top:80px;
+	}
+
+	.services{
+		margin-top:40px;
+
+		.service{
+			.colorbox(light, 20px 20px 20px 40px);
+			margin:40px 20px;
+			position: relative;
+
+			.title{
+				color:@color-secondary;
+				margin:0 0 5px 0;
+			}
+
+			.text{
+				margin: 0 0 20px 0;
+			}
+
+			.arrow{
+				position: absolute;
+				right:10px;
+				bottom:10px;
+			}
+		}
+
+		#websites{ 
+			background-image: url("@{img_dir}big_icons.websites.png");
+			background-repeat:no-repeat;
+			background-position: center center;
+		}
+
+		#marketing{
+			background-image: url("@{img_dir}big_icons.marketing.png");
+			background-repeat:no-repeat;
+			background-position: center center;
+		}
+
+		#content{
+			background-image: url("@{img_dir}big_icons.content.png");
+			background-repeat:no-repeat;
+			background-position: center center;
+		}
+
+	} //.services
+
+	.statement{.colorbox(secondary; 0);margin:40px 20px;
+		.inner{padding:30px 30px 50px 30px ;position: relative;z-index: 2;
+			.video{text-align: center;
+				img{max-width: 100%;height:auto;.drop-shadow();}
+			}
+			.header,p,a,i{color:@color-lightest;}
+			.header{}
+			.arrow{position: absolute;right:10px;bottom:10px;}
+		}
+		.watermark{.watermark(white);position:absolute;right:-100px;bottom:50px;}
+	} // .statement
+
+}
+
+
+/*********************
+FINAL REQUEST
+*********************/
+
+.home-final-request-wrapper{
+	background-color: #F4F4F4;
+	border-top:2px solid @color-mid;
+	margin-top:80px;
+	.extend();
+}
+
+#home-request-consultation{
+	
+	.form-wrapper{.colorbox(light); margin:-40px 20px 40px 20px; position:relative; z-index: 10;
+		.big-form{
+			.title{
+				h2{margin:10px 20px; text-align: center; color:@font-secondary; .text-shadow();}
+				span{ text-align: center; display: block; padding:20px; }
+
+				@media @query-tablet {
+					h2{ float:left; display:inline-block; text-align: left; margin:10px 20px;}
+					span{float:right; display:inline-block; text-align: left; padding:20px 20px 0 0;}
+				}
+			}
+			.inputs{
+				margin-bottom: 10px;
+				input{ width:95%}
+				textarea{width:95%;min-height:110px;}
+			}
+			.actions{
+				.redirect{float:right; font-size:13px; padding:10px 20px 0 0;}
+				.button{float:right;}
+				.human-wrap{float:left; position: relative; z-index: 10;}
+			}
+		}
+	}
+
+	.watermark{
+		.watermark(blue);
+		position:absolute;
+		left:-70px;
+		bottom:-55px;
+		z-index: 1;
+	}
+}
+
+
+#home-final-word{
+	padding-top:50px;
+	padding-bottom:100px;
+	position:relative;
+
+	.final-word{
+
+		@media @query-tablet {
+			margin-left:50px;
+			margin-right:20px;			
+		}
+
+		.text{
+			margin-bottom:10px;
+			font-size:16px;
+		}
+	}
+}
+
+.home #page-footer{
+	margin-top:0;
+}

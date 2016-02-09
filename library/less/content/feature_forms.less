@@ -1,0 +1,493 @@
+/******************************************************************************
+Site Name: WAXWINGLEGAL.COM
+Author: BOSWORTH
+
+Stylesheet: contact_us , 
+			getting_started 
+******************************************************************************/
+
+///////////////////////////////////////////////////////////////////////////////
+//  MIXINS
+///////////////////////////////////////////////////////////////////////////////
+
+@import "../_mixins.less";
+@import "../icons/font-awesome/font-awesome_mixins.less";
+@import "../icons/iconic-fill/iconic-fill_mixins.less";
+
+
+/*********************
+MAIN
+*********************/
+
+.feature-form-layout{
+	margin-top:100px;
+	min-height:0;
+	padding-bottom:40px;
+	margin-bottom:100px;
+	.colorbox(light);
+
+	@media @query-tablet{
+		min-height:600px;
+
+		// fix for no sidebar.
+		max-width:960px;
+		margin-right:auto; 
+		margin-left:auto;
+	}
+
+	.header{
+		margin:-15px -15px 15px -15px;
+
+		h1{
+			color:@color-lightest;
+			font-size:42px;
+			line-height: 1;
+			margin: 0 10px;
+		}
+
+		.subtext{
+			color:@color-lightest;
+			position: absolute;
+			bottom:20px;
+			right:20px;
+		}
+
+		.watermark{
+			.watermark(white);
+			position:absolute;
+			right:-111px;
+			top:-14px;
+		}
+
+	} //.header
+
+	.details{
+		
+		@media @query-tablet {
+			margin:20px;
+		}
+
+		&.after{
+			border-top:4px solid @color-secondary-hi;
+		}		
+
+		.detail{
+			min-width: 200px;
+			margin-bottom:15px;
+			position:relative;
+
+			@media @query-tablet {
+				min-height:100px;
+				margin-bottom:0;
+			}
+
+			&.phone{
+				strong{
+					font-size: 20px;
+				}
+			}
+
+			.wrap{
+				margin-top:20px;
+				margin-bottom:20px;
+
+				h3{
+					.font-header-alt(28px, 1.2em);
+					color:@color-secondary-lo;
+					margin:0 0 10px 0;
+				}
+
+				.social-links a{
+					.squared-icon(36px, 22px, @color-secondary, @color-lightest );
+				}
+
+				.support-links{
+					list-style: none;
+					li{
+						float:left;
+						padding:5px 10px 5px 0;
+						display: inline-block;
+						position:relative;
+					}
+				}
+			}
+		}
+
+	} //.details
+
+	.feature-form{
+		position:relative;
+		margin-bottom:40px;
+	}
+
+	.big-form{
+		position: relative;
+		z-index: 2;
+
+		fieldset{
+			margin:20px 0 20px 0;
+
+			@media @query-tablet{
+				margin:20px 20px 20px 20px;
+			}
+
+			legend{
+				border-bottom:5px solid @color-secondary;
+				.font-header-alt(26px,1em,300);
+				color:@font-dark;
+				margin:5px 5px 30px 0;
+				padding:5px 0;
+				text-indent: 0;
+				
+				i{display:none;}
+
+				a{
+					color:@link-up;
+					text-decoration: none;
+				}
+			}
+
+			.control-group{
+
+				.control-label,
+				.controls{ 
+					display:block;
+				}
+			}
+		} //fieldset
+
+		.plans{
+
+			.col_third{
+
+				@media @query-tablet{
+					margin:0;
+					width:33.333%;
+				}
+			}
+
+			.plan{
+
+				.wrap{
+					display:block;
+					margin:-30px 0 0 0;
+					padding:20px;
+					text-align: center;
+
+					.h2{
+						display: block;
+						text-align: center;
+						color:@font-lightest;
+					}
+
+					.control-label{
+						.simple-price{
+							display:block;
+							text-align: center;
+							color:@color-lightest;
+						}
+
+						input{
+							display: block;
+							margin: 2px auto;
+							cursor: pointer;
+							height:15px;
+							width:15px;
+						}
+					}
+				}
+			}
+
+			#plan-1 .wrap{background-color: @color-secondary-hi;}
+			#plan-2 .wrap{background-color: @color-secondary;}
+			#plan-3 .wrap{background-color: @color-secondary-lo;}
+
+		} // .plans
+
+		.actions {
+
+			.links{
+				text-align: left;
+				li{
+					.link{ font-weight: bold; }
+				}
+			}
+
+			.submit{
+				@media @query-tablet{
+					position:absolute;
+					top:0;
+					right:20px;
+				}
+			}
+		} //.actions
+
+		.humancheck{
+			position:relative;
+		}
+
+	} //.big-form
+
+} //.contact_us
+
+.feature-form-footer{
+	.watermark{
+		.watermark(blue);
+		position:absolute;
+		left:-125px;
+		bottom:-70px;
+		z-index: 1;
+	}
+}
+
+/*********************
+ASIDE
+*********************/
+
+.feature-form-aside{
+
+	@media @query-tablet{
+		margin-top:100px !important;
+	}
+}
+
+/*********************
+Pages
+*********************/
+
+#contact-us{
+	.inner{
+		.extend();
+
+		@media @query-tablet{
+			background: transparent url("@{img_dir}banners/pillars.1920x600.jpg") no-repeat 50% 0%;
+		}
+	}
+
+	.feature-form-layout .header{
+		.colorbox(primary);
+	}
+
+	.feature-form-aside{
+
+		// force under the image
+		@media @query-tablet{
+			margin-top:650px;
+		}
+	}
+
+	.hidden-info{
+		position: relative;
+
+		&[data-state="open"]{}
+		&[data-state="closed"]{
+
+		}
+	}
+
+	.notice{
+		padding-left:20px;
+		.clicker{	
+			position:absolute;
+			top:10px;
+			left:0;
+			.icon_primary(24px);
+		}
+	}
+
+}
+
+#getting-started{
+	.inner{
+		.extend();
+
+		@media @query-tablet{
+			background: transparent url("@{img_dir}banners/cityscape.1920x600.jpg") no-repeat 50% 0%;
+		}
+	}
+
+	.humancheck{
+		padding:20px 20px 0 10px;
+		max-width:200px;
+	}
+
+	.feature-form-layout .header{
+		.colorbox(secondary);
+	}
+
+	.feature-form-aside{
+		//position:fixed;
+	}
+}
+
+#support{
+	.inner{
+		.extend();
+
+		@media @query-tablet{
+			background: transparent url("@{img_dir}banners/pillars_2.1920x600.jpg") no-repeat 50% 0%;
+		}
+	}
+
+	.feature-form-layout .header{
+		.colorbox(secondary);
+	}
+}
+
+#seo-analysis{
+
+
+	.inner{
+		.extend();
+
+		@media @query-tablet{
+			background: transparent url("@{img_dir}banners/cityscape.1920x600.jpg") no-repeat 50% 0%;
+		}
+	}
+
+	.feature-form-layout .header{
+		.colorbox(secondary);
+	}
+
+	.noquery{
+		.wrap {
+			.big-form{
+				margin:60px auto;
+				text-align: center;
+			}
+		}
+	}
+
+	.results{
+		position:relative;
+
+		.results-header{
+
+			.query{
+				color:@font-primary;
+				font-size:36px;
+			}
+		}
+
+		&> .wrap{
+			padding:10px;
+			border:1px solid @color-light;
+			margin:0;
+		}
+
+		table.output{
+			width:100%;
+
+			.wrap{ position:relative;}
+
+			th{
+				.wrap{
+					.font-header-alt(18px,18px,400);
+					padding: 6px 8px; 
+					background-color: @color-light; 
+					color:@font-dark;
+				}
+			}
+
+			td {
+				border-top:1px solid @color-secondary;
+				.wrap{
+					padding: 15px; 
+					font-size: 15px;
+					background-color: @color-lightest;					
+				}
+			}
+		}
+
+		.check-domain{
+			@media @query-tablet{
+				position:absolute;
+				top:35px;
+				right:10px;
+				z-index: 50;
+			}
+		}
+
+		.obscured-data{
+			height:100px;
+			width:100%;
+			background: transparent url("@{img_dir}SEO_obscured_results.jpg") no-repeat center center;
+			background-color: @color-light;
+			text-align: center;
+
+			.snippet{
+				position: relative;
+				margin:0;
+				top:20px;
+			}
+		}
+	}
+
+	.feature-form{
+
+		.callout{
+			margin:30px;
+			.colorbox(secondary);
+			text-align: center;
+			h2{ color:@font-lightest; }
+			p { color:@font-lightest; }
+		}
+
+		.big-form{
+			padding:40px;
+
+			textarea[name="message"]{
+				min-height:110px;
+			}
+
+			.actions{
+				padding:0;
+
+				.human-wrap{
+					position:relative;
+					text-align: left;
+
+					label.notvalid{ left:0; right:auto;}
+				}
+				.submit{
+					right:0;
+				}				
+			}
+		}
+	}
+}
+
+#consultation-request {
+	.inner{
+		.extend();
+
+		@media @query-tablet{
+			background: transparent url("@{img_dir}banners/cityscape.1920x600.jpg") no-repeat 50% 0%;
+		}
+	}
+
+	.feature-form-layout {
+		.header{
+			.colorbox(primary);
+		}
+	}
+}
+
+#post-not-found {
+	.inner{
+		.extend();
+
+		@media @query-tablet{
+			background: transparent url("@{img_dir}banners/crimescene.1929x600.jpg") no-repeat 50% 0%;
+		}
+	}
+
+	.feature-form-layout {
+		.header{
+			.colorbox(primary);
+		}
+		article.hentry{
+			margin:40px;
+		}
+	}
+}

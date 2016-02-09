@@ -1,0 +1,526 @@
+///////////////////////////////////////////////////////////////////////////////
+//	Site	-  Waxwinglegal.com
+//	AUTHOR 	- josh@joshbosworth.com
+//	COMMENT	- colors and mixins!
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+//  VARS
+///////////////////////////////////////////////////////////////////////////////
+
+// Directories ////////////////////////////////////////////////////////////////
+
+@img_dir            : "/img/";
+@icon_theme         : "";
+
+// MEDIA QUERIES //////////////////////////////////////////////////////////////
+@query-mobile       :   ~"only screen and (min-width: 481px)";
+@query-tablet       :   ~"only screen and (min-width: 768px)";
+@query-desktop      :   ~"only screen and (min-width: 1040px)";
+@query-widescreen   :   ~"only screen and (min-width: 1248px)";
+
+///////////////////////////////////////////////////////////////////////////////
+//  COLORS
+///////////////////////////////////////////////////////////////////////////////
+
+// Base Colors ////////////////////////////////////////////////////////////////
+
+@color-primary      : #ED2E12;
+@color-primary-hi   : #EF4229;
+@color-primary-lo   : #CA260F;
+
+@color-secondary    : #1A78EC;
+@color-secondary-hi : #5199F0;
+@color-secondary-lo : #1163C6;
+
+@color-header       : #111;
+@color-header-hi    : #1B1B1B;
+@color-header-lo    : #111;
+
+@color-footer       : #CDCDCD;
+@color-footer-hi    : #D4D4D4;
+@color-footer-lo    : #BBBBBB;
+
+@color-darkest      : #000;
+@color-darker       : #222;
+@color-dark         : #444;
+@color-mid          : #999;
+@color-light        : #ddd;
+@color-lighter      : #eee;
+@color-lightest     : #fff;
+
+// TYPOGRAPHY /////////////////////////////////////////////////////////////////
+
+@font-primary       : @color-primary; 
+@font-primary-hi    : @color-primary-hi;
+@font-primary-lo    : @color-primary-lo;
+
+@font-secondary     : @color-secondary;
+@font-secondary-hi 	: @color-secondary-hi;
+@font-secondary-lo 	: @color-secondary-lo;
+
+@font-darkest       : @color-darkest; 
+@font-darker        : @color-darker; 
+@font-dark          : @color-dark;
+@font-mid           : @color-mid;
+@font-light         : @color-light;
+@font-lighter       : @color-lighter;
+@font-lightest      : @color-lightest;
+
+// LINKS //////////////////////////////////////////////////////////////////////
+
+@link-up            : @font-secondary;
+@link-over 	        : @font-secondary-hi;
+
+@link-dark-up       : @font-lighter;
+@link-dark-over     : @font-lightest;
+
+@link-light-up      : @font-primary;
+@link-light-over    : @font-lightest;
+
+@link-header-up     : @font-lighter;
+@link-header-over 	: @font-lightest;
+
+@link-footer-up     : @font-lighter;
+@link-footer-over 	: @font-lightest;
+
+// ALERTS /////////////////////////////////////////////////////////////////////
+
+@alert-yellow       : #FEFFE6;
+@alert-red          : #FBE3E4;
+@alert-green        : #E6EFC2;
+@alert-blue         : #D5EDF8;
+
+// SELECTION //////////////////////////////////////////////////////////////////
+
+@selection          : #FFFF80;
+@img-selection      : transparent;
+
+///////////////////////////////////////////////////////////////////////////////
+//  TYPOGRAPHY
+///////////////////////////////////////////////////////////////////////////////
+
+@sans-serif         : "Helvetica Neue", Helvetica, Arial, sans-serif; 
+@serif              : "Georgia", Cambria, Times New Roman, Times, serif; 
+
+//@font-header        : "BebasNeueRegular", @sans-serif; 
+@font-header        : "arsenalregular", @sans-serif;
+@font-header-alt    : "universalis_adf_stdregular", @sans-serif;
+@font-body          : @sans-serif;       
+
+.font-header(@font-size:1.75em, @line-height: 1.4em, @font-weight:400){
+  font-family       : @font-header;
+  font-size         : @font-size;
+  line-height       : @line-height;
+  text-rendering    : optimizelegibility;
+  font-weight       : @font-weight;
+}
+
+.font-header-alt(@font-size:1.75em, @line-height: 1.4em, @font-weight:400){
+  font-family       : @font-header-alt;
+  font-size         : @font-size;
+  line-height       : @line-height;
+  text-rendering    : optimizelegibility;
+  font-weight       : @font-weight;
+}
+
+.font-body(@font-size:100%, @line-height: 1.5, @font-weight: 500){
+  font-family       : @font-body;
+  font-size         : @font-size;
+  line-height       : @line-height;
+  text-rendering    : optimizelegibility; 
+  font-weight       : @font-weight;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  GRADIENTS
+///////////////////////////////////////////////////////////////////////////////
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,left bottom,left top,color-stop(0, @start),color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom, @start, @stop);
+  background: linear-gradient(@start, @stop);
+}
+
+.horizontal-gradient(@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+  background-image: -ms-linear-gradient(left, @startColor, @endColor);
+  background: linear-gradient(-90deg, @start, @stop);
+}
+
+.rd-gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background-image: -webkit-radial-gradient(circle, @start, @stop);
+  background-image:-ms-radial-gradient(center center, circle cover, @start 0%, @stop 100%);
+  background-image:radial-gradient(center center, circle cover, @start 0%, @stop 100%);
+}
+
+.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
+  background: @color;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(@start,@start,@start)),color-stop(1, rgb(@stop,@stop,@stop)));
+  background: -ms-linear-gradient(bottom,rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
+  background: linear-gradient( rgb(@stop,@stop,@stop), rgb(@start,@start,@start));
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  DROP SHADOWS
+///////////////////////////////////////////////////////////////////////////////
+
+
+// .drop-shadow(0, 2px, 6px, .4);
+.drop-shadow(@x-axis: 2px, @y-axis: 2px, @blur: 2px, @alpha: 0.2) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+     -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+          box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+// .box-shadow(0, 2px, 6px, rgba(50,50,50,0.2));
+.box-shadow(@x: 0, @y: 0, @blur: 2px, @color: rgba(0,0,0,0.25)) {
+  -webkit-box-shadow: @arguments;
+     -moz-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+
+// .box-shadows(0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255, 255, 255, 0.2), 0 10px rgba(255, 255, 255, 0.2); );
+.box-shadows(@shadows){
+  -webkit-box-shadow: @shadows;
+     -moz-box-shadow: @shadows;
+          box-shadow: @shadows;
+}
+
+// .inner-shadow(0, 2px, 6px, rgba(50,50,50,0.2));
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+     -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+          box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+// .text-shadow(0, 2px, 6px, rgba(50,50,50,0.2));
+.text-shadow(@x: 0, @y: 1px, @blur: 1px, @color: rgba(0,0,0,0.25)) {
+  -webkit-text-shadow: @x @y @blur @color;
+     -moz-text-shadow: @x @y @blur @color;
+          text-shadow: @x @y @blur @color;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  BORDERS
+///////////////////////////////////////////////////////////////////////////////
+
+.bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
+  border-top: solid 1px @top-color;
+  border-left: solid 1px @left-color;
+  border-right: solid 1px @right-color;
+  border-bottom: solid 1px @bottom-color;
+}
+
+.border-radius(@radius: 2px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+  -webkit-background-clip: padding-box; 
+     -moz-background-clip: padding; 
+          background-clip: padding-box; 
+}
+
+.border-radiuses(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-bottom-right-radius: @bottomright;
+   -webkit-border-bottom-left-radius: @bottomleft;
+     -webkit-border-top-right-radius: @topright;
+      -webkit-border-top-left-radius: @topleft;
+  -moz-border-radius-bottomright: @bottomright;
+   -moz-border-radius-bottomleft: @bottomleft;
+     -moz-border-radius-topright: @topright;
+      -moz-border-radius-topleft: @topleft;
+  border-bottom-right-radius: @bottomright;
+   border-bottom-left-radius: @bottomleft;
+     border-top-right-radius: @topright;
+      border-top-left-radius: @topleft;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  OPACITY
+///////////////////////////////////////////////////////////////////////////////
+
+.transparent(@opacity: 50) {
+  -moz-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity:@opacity * .01;
+  filter:alpha(opacity=@opacity); 
+}
+
+.opacity(@opacity: 0.5) {
+  -moz-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity: @opacity;
+  @opperc: @opacity * 100;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  TRANSITIONS
+///////////////////////////////////////////////////////////////////////////////
+
+.transition-duration(@duration: 0.2s) {
+  -moz-transition-duration: @duration;
+  -webkit-transition-duration: @duration;
+  -o-transition-duration: @duration;
+  transition-duration: @duration;
+}
+
+.transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+
+.type-transition(@type:all, @duration:0.2s, @ease:ease-in-out) {
+  -webkit-transition: @type @duration @ease;
+  -moz-transition: @type @duration @ease;
+  -o-transition: @type @duration @ease;
+  transition: @type @duration @ease;
+}
+
+.transition-delay(@duration:0.2s){
+  -webkit-transition-delay: @duration;
+  transition-delay: @duration;
+}
+
+.transform(...) {
+  -webkit-transform: @arguments;
+  -moz-transform: @arguments;
+  -o-transform: @arguments;
+  -ms-transform: @arguments;
+  transform: @arguments;
+}
+
+.animation(...){
+  -webkit-animation: @arguments;
+  animation: @arguments;
+}
+
+.rotation(@deg:5deg){
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+
+.translate(@x:0, @y:0) {
+  .transform(translate(@x, @y));
+}
+
+.scale(@ratio:1.5){
+  .transform(scale(@ratio));
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  ICONS
+///////////////////////////////////////////////////////////////////////////////
+
+@icon-light         : @color-lightest;
+@icon-dark          : @color-dark;
+@icon-primary       : @color-primary;
+@icon-secondary     : @color-secondary;
+
+.icon_default(@font-size){
+  font-size:@font-size;
+  line-height:.9;
+  text-indent: 0 !important;}
+
+.icon_light(@font-size:36px){
+  color: @icon-light;
+  .icon_default(@font-size);
+  .text-shadow (0,0,1px,@icon-light);}
+
+.icon_dark(@font-size:36px){
+  color: @icon-dark;
+  .icon_default(@font-size);
+  .text-shadow (0,0,1px,@icon-dark);}
+
+.icon_primary(@font-size:36px){
+  color: @icon-primary;
+  .icon_default(@font-size);
+  .text-shadow (0,0,1px,@icon-primary);}
+
+.icon_secondary(@font-size:36px){
+  color: @icon-secondary;
+  .icon_default(@font-size);
+  .text-shadow (0,0,1px,@icon-secondary);}
+
+.squared-icon(@outer: 50px, @inner:40px, @background-color: #444, @color:#fff ){
+  @offset: ((@outer - @inner) / 2);
+  background-color:@background-color;
+  color: @color;
+  display:inline-block;
+  font-size:@inner;
+  line-height:1;
+  height:@outer;
+  padding-top:@offset;
+  text-indent: 0 !important;
+  width:@outer;
+  text-align: center;
+  //.text-shadow(0, 0, 1px, @color);
+
+  .opacity(1);
+  .transition();
+
+  &:before { 
+    width:100%; text-align: center 
+  }
+  &:hover,
+  &:focus{
+    .opacity(.8);
+    .transition();
+  }
+
+}
+
+.rounded-icon(@outer: 50px, @inner:40px, @background-color: #444, @color:#fff ){
+  .squared-icon(@outer, @inner, @background-color, @color);
+  .border-radius(@outer/2);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  BUTTONS
+///////////////////////////////////////////////////////////////////////////////
+
+// INPUTS /////////////////////////////////////////////////////////////////////
+
+@button-input                 : @color-primary;
+@button-input-border          : @color-lighter;
+@button-input-color           : @font-lightest;
+
+@button-input-hover           : @color-primary-hi;
+@button-input-hover-border    : @color-lightest;
+@button-input-hover-color     : @font-lightest;
+
+@button-input-active          : @color-primary-lo;
+@button-input-active-border   : @color-primary-lo;
+@button-input-active-color    : @font-lighter;
+
+.button(@size:16px, @line-height:16px){
+	border: 1px solid @button-input-border;
+	padding: 4px 12px;
+	color: @button-input-color;
+	cursor: pointer;
+    display: inline-block;
+    font-size: @size;
+	line-height: @line-height;
+    margin:4px;
+    text-decoration: none;
+    .font-header(@font-size:@size, @line-height: @size, @font-weight:400);
+    .border-radius(4px);
+    .gradient(@button-input,lighten(@button-input, 5%),darken(@button-input, 5%));
+	.transition();
+}
+
+.large-button(@size:22px, @line-height:22px){
+    .button(@size, @line-height);
+    margin:6px;
+    text-transform: uppercase;
+    padding:10px 20px 8px 20px;
+}
+
+.button-hover-focus{
+    color: @button-input-hover-color !important;
+    border-color: @button-input-hover-border;
+    .gradient(@button-input-hover,lighten(@button-input-hover, 5%),darken(@button-input-hover, 5%));
+}
+
+.button-active{
+    color: @button-input-active-color !important;
+    border-color: @button-input-active-border;
+    .gradient(@button-input-active,lighten(@button-input-active, 5%),darken(@button-input-active, 5%));
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  INPUTS
+///////////////////////////////////////////////////////////////////////////////
+
+
+.input-base(){
+    display: inline-block;
+    background: darken(@color-lightest,5%); 
+    border-top:1px solid @color-light;
+    border-left:1px solid @color-light;
+    border-bottom:1px solid @color-mid;
+    border-right:1px solid @color-mid;
+    color: @font-dark;
+    font-size: 13px;
+    line-height: 18px;
+    height: 28px;
+    padding: 4px;
+    margin: 4px 4px 8px 0;
+    vertical-align: top;
+    .border-radius(2px);
+    .drop-shadow(1px,1px,2px,.2);
+    .transition();
+}
+
+.input-bigform{
+    .input-base();
+
+    height: 42px;
+    padding: 5px 8px;
+    margin: 6px 6px 12px 0;
+    font-size: 18px;
+    line-height: 22px;
+    .drop-shadow(1px,1px,2px,.3); 
+}
+
+.input-focus{
+    outline: 0;
+    background-color: @color-lightest;
+    border-top:1px solid @color-mid;
+    border-left:1px solid @color-mid;
+    border-bottom:1px solid @color-lighter;
+    border-right:1px solid @color-lighter;
+    color: @font-dark;
+    .drop-shadow(0,0,0,0);
+    .inner-shadow(1px,1px,3px,0.4);
+    .transition();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  PREFABS
+///////////////////////////////////////////////////////////////////////////////
+
+
+// EXTENDS
+.extend(){
+  margin-right:-999em !important;
+  margin-left:-999em !important;
+  padding-left:999em !important;
+  padding-right:999em !important;
+}
+
+// COLORBOXES
+.colorbox(light; @padding:15px){background-color: @color-lightest;}
+.colorbox(dark; @padding:15px){background-color: @color-darker;}
+.colorbox(primary; @padding:15px){background-color: @color-primary;}
+.colorbox(secondary; @padding:15px){background-color: @color-secondary;}
+
+.colorbox(@_; @padding:15px){
+    overflow: hidden;
+    position:relative;
+    padding:@padding;
+    .border-radius(1px);
+    .drop-shadow(2px,2px,2px,.22);
+}
+
+// WATERMARK
+
+// http://www.mindscapehq.com/blog/index.php/2012/01/26/pattern-matching-and-guards-in-less-stylesheets/
+.watermark(white;){ background: url("@{img_dir}brands/WaxwingLegal_Glyph.watermark.white.png") no-repeat 0 0; }
+.watermark(blue;){ background: url("@{img_dir}brands/WaxwingLegal_Glyph.watermark.blue.png") no-repeat 0 0; }
+.watermark(@_;){
+  display:inline-block;
+  position:absolute;
+  height:114px;
+  width:250px;
+  z-index: 1;
+}

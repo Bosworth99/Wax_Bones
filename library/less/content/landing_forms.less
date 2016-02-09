@@ -1,0 +1,238 @@
+/******************************************************************************
+Site Name: WAXWINGLEGAL.COM
+Author: BOSWORTH
+
+Stylesheet: Landing page stuff
+******************************************************************************/
+
+///////////////////////////////////////////////////////////////////////////////
+//  MIXINS
+///////////////////////////////////////////////////////////////////////////////
+
+@import "../_mixins.less";
+@import "../icons/font-awesome/font-awesome_mixins.less";
+@import "../icons/iconic-fill/iconic-fill_mixins.less";
+
+
+
+#page-header {
+
+	.contact{
+
+		.desktop{
+			padding-top:5px;
+
+			.contact-item{
+				a {}
+			} //.contact-item
+
+			.contact-phone{
+				top:22px;
+				.phone{
+					font-size: 24px;
+				}
+			} //.contact-phone
+
+			.contact-social{
+				top:22px;
+			} //.contact-social
+
+			#header-social-links{
+				a{ .squared-icon(32px, 24px, @color-secondary, @color-lightest ); }
+			}
+
+		} // .desktop
+
+	} // .contact
+
+	.nav {
+		display:none !important;
+	} // .nav
+
+}
+
+#page-footer #inner-footer{
+	#footer-content{height:70px !important;
+		[class*='column_']{
+			display: none !important;
+		}
+	}
+}
+
+/*********************
+MAIN
+*********************/
+
+.landing-form-layout{
+	margin-top:100px;
+	min-height:0;
+	padding-bottom:40px;
+	margin-bottom:100px;
+	.colorbox(light,20px);
+
+	@media @query-tablet{
+		min-height:600px;
+
+		// fix for no sidebar.
+		max-width:960px;
+		margin-right:auto; 
+		margin-left:auto;
+	}
+
+	.landing-header{
+		margin:-20px -20px 20px -20px;
+
+		h1{
+			color:@color-lightest;
+			font-size:42px;
+			line-height: 1;
+			margin: 0 10px;
+		}
+
+		.subtext{
+			color:@color-lightest;
+			position: absolute;
+			bottom:20px;
+			right:20px;
+		}
+
+		.watermark{
+			.watermark(white);
+			position:absolute;
+			right:-111px;
+			top:-14px;
+		}
+
+	} //.header
+
+
+	.landing-content{
+
+		h2,h3,h4,h5,h6{
+			color:@font-secondary;
+		}
+
+		.cta-wrap{
+			position: relative;
+			z-index: 2;
+
+			.content-wrap .inner{}
+
+			.form-wrap{
+				.input{width:99%;}
+			}
+
+			&.simple{
+				.content-wrap{
+					margin:40px 10px;
+				}
+				.form-wrap{
+					margin:40px;
+					text-align: center;
+					.input{max-width:350px;}
+				}
+			}
+
+			&.basic{
+				.content-wrap .inner{
+					margin:40px 10px;
+				}
+				.form-wrap .inner{
+					margin:40px 0 60px 0;
+
+					@media @query-tablet{
+						min-height:350px;
+						padding-left:20px;
+						border-left:2px solid @color-primary;
+						text-align: center;
+					}
+
+					.submit{margin:10px 0;float:right;}
+				}
+			}
+
+			&.complex{
+				.content-wrap .inner{
+					margin:40px 20px;
+				}
+				.form-wrap .inner{
+					margin:40px 0 60px 0;
+
+					@media @query-tablet{
+						min-height:400px;
+						padding-left:20px;
+						border-left:2px solid @color-primary;
+						text-align: center;
+					}
+					
+					.submit{margin:10px 0;float:right;}
+				}
+			}
+
+		}
+
+		.big-form{
+			position: relative;
+
+			fieldset{
+				margin:20px 0 20px 0;
+
+				@media @query-tablet{
+					margin:20px 20px 20px 20px;
+				}
+
+				.control-group{
+					.control-label,
+					.controls{ 
+						display:block;
+					}
+				}
+			} //fieldset
+
+			.actions {
+
+				.links{
+					text-align: left;
+					li{
+						.link{ font-weight: bold; }
+					}
+				}
+
+				.submit{
+					@media @query-tablet{
+						position:absolute;
+						top:0;
+						right:20px;
+					}
+				}
+			} //.actions
+
+			.humancheck{
+				position:relative;
+			}
+
+		} //.big-form
+
+	}
+
+	.landing-footer{
+		.watermark{
+			.watermark(blue);
+			position:absolute;
+			left:-125px;
+			bottom:-70px;
+			z-index: 1;
+		}
+	}
+
+} //.contact_us
+
+#inner-content{
+	@media @query-tablet{
+		background: transparent url("@{img_dir}banners/cityscape.1920x600.jpg") no-repeat 50% 0%;
+	}
+
+	.landing-form-layout .landing-header{
+		.colorbox(secondary);
+	}
+}

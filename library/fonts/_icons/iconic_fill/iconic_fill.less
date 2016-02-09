@@ -1,0 +1,193 @@
+
+
+@iconic_path : "/assets/fonts/ICON/iconic_fill/";
+@font-face {
+    font-family: 'IconicFill';
+    src: url('@{iconic_path}iconic_fill.eot');
+    src: url('@{iconic_path}iconic_fill.eot?#iefix') format('embedded-opentype'), 
+    	url('@{iconic_path}iconic_fill.ttf') format('truetype'), 
+    	url('@{iconic_path}iconic_fill.svg#iconic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.iconic() {
+    &:before {
+        font-family: IconicFill;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        -webkit-font-smoothing: antialiased !important;
+        speak:none;
+    }
+}
+ 
+// make a css rule here , and add the hex code as a value <i class="iconic">\e063</i>
+/*[data-iconic]{
+  .iconic();
+}
+ 
+a [data-iconic] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+ 
+.iconic-large() {
+    &:before {
+        vertical-align: middle;
+        font-size: 4/3em;
+    }
+}*/
+
+.iconic-lightbulb()                	{ .iconic(); &:before { content: "\e063"; }}
+.iconic-equalizer()                	{ .iconic(); &:before { content: "\e052"; }}
+.iconic-brush_alt()                	{ .iconic(); &:before { content: "\e01c"; }}
+.iconic-move()                		{ .iconic(); &:before { content: "\e03e"; }}
+.iconic-tag_fill()                	{ .iconic(); &:before { content: "\e02b"; }}
+.iconic-book_alt2()                	{ .iconic(); &:before { content: "\e06a"; }}
+.iconic-layers()                	{ .iconic(); &:before { content: "\e01f"; }}
+.iconic-chat_alt_fill()             { .iconic(); &:before { content: "\e007"; }}
+.iconic-layers_alt()             	{ .iconic(); &:before { content: "\e020"; }}
+.iconic-cloud_upload()             	{ .iconic(); &:before { content: "\e045"; }}
+.iconic-chart_alt()             	{ .iconic(); &:before { content: "\e029"; }}
+.iconic-fullscreen_exit_alt()       { .iconic(); &:before { content: "\e051"; }}
+.iconic-cloud_download()       		{ .iconic(); &:before { content: "\e044"; }}
+.iconic-paperclip()       			{ .iconic(); &:before { content: "\e08a"; }}
+.iconic-heart_fill()       			{ .iconic(); &:before { content: "\2764"; }}
+.iconic-mail()       				{ .iconic(); &:before { content: "\2709"; }}
+.iconic-pen_alt_fill()       		{ .iconic(); &:before { content: "\e005"; }}
+.iconic-check_alt()       			{ .iconic(); &:before { content: "\2718"; }}
+.iconic-battery_charging()       	{ .iconic(); &:before { content: "\e05d"; }}
+.iconic-lock_fill()       			{ .iconic(); &:before { content: "\e075"; }}
+.iconic-stop()       				{ .iconic(); &:before { content: "\e04a"; }}
+.iconic-arrow_up()       			{ .iconic(); &:before { content: "\2191"; }}
+.iconic-move_horizontal()       	{ .iconic(); &:before { content: "\e038"; }}
+.iconic-compass()       			{ .iconic(); &:before { content: "\e021"; }}
+.iconic-minus_alt()       			{ .iconic(); &:before { content: "\e009"; }}
+.iconic-battery_empty()       		{ .iconic(); &:before { content: "\e05c"; }}
+.iconic-battery_empty()       		{ .iconic(); &:before { content: "\e05c"; }}
+.iconic-map_pin_alt()       		{ .iconic(); &:before { content: "\e002"; }}
+.iconic-question_mark()       		{ .iconic(); &:before { content: "\003f"; }}
+.iconic-list()       				{ .iconic(); &:before { content: "\e055"; }}
+.iconic-upload()       				{ .iconic(); &:before { content: "\e043"; }}
+.iconic-reload()       				{ .iconic(); &:before { content: "\e030"; }}
+.iconic-loop_alt4()       			{ .iconic(); &:before { content: "\e035"; }}
+.iconic-loop_alt3()       			{ .iconic(); &:before { content: "\e034"; }}
+.iconic-loop_alt2()       			{ .iconic(); &:before { content: "\e033"; }}
+.iconic-loop_alt1()       			{ .iconic(); &:before { content: "\e032"; }}
+.iconic-left_quote()       			{ .iconic(); &:before { content: "\275d"; }}
+.iconic-x()       					{ .iconic(); &:before { content: "\2713"; }}
+.iconic-last()       				{ .iconic(); &:before { content: "\e04d"; }}
+.iconic-bars()       				{ .iconic(); &:before { content: "\e06f"; }}
+.iconic-arrow_left()       			{ .iconic(); &:before { content: "\2190"; }}
+.iconic-arrow_down()       			{ .iconic(); &:before { content: "\2193"; }}
+.iconic-download()       			{ .iconic(); &:before { content: "\e042"; }}
+.iconic-home()       				{ .iconic(); &:before { content: "\2302"; }}
+.iconic-calendar()       			{ .iconic(); &:before { content: "\e001"; }}
+.iconic-right_quote_alt()       	{ .iconic(); &:before { content: "\e012"; }}
+.iconic-unlock_fill()       		{ .iconic(); &:before { content: "\e076"; }}
+.iconic-fullscreen()       			{ .iconic(); &:before { content: "\e04e"; }}
+.iconic-dial()       				{ .iconic(); &:before { content: "\e058"; }}
+.iconic-plus_alt()       			{ .iconic(); &:before { content: "\e008"; }}
+.iconic-clock()       				{ .iconic(); &:before { content: "\e079"; }}
+.iconic-movie()       				{ .iconic(); &:before { content: "\e060"; }}
+.iconic-steering_wheel()       		{ .iconic(); &:before { content: "\e024"; }}
+.iconic-pen()       				{ .iconic(); &:before { content: "\270e"; }}
+.iconic-pin()       				{ .iconic(); &:before { content: "\e067"; }}
+.iconic-denied()       				{ .iconic(); &:before { content: "\26d4"; }}
+.iconic-left_quote_alt()       		{ .iconic(); &:before { content: "\e011"; }}
+.iconic-volume_mute()       		{ .iconic(); &:before { content: "\e071"; }}
+.iconic-umbrella()       			{ .iconic(); &:before { content: "\2602"; }}
+.iconic-list_nested()       		{ .iconic(); &:before { content: "\e056"; }}
+.iconic-arrow_up_alt1()       		{ .iconic(); &:before { content: "\e014"; }}
+.iconic-undo()       				{ .iconic(); &:before { content: "\e02f"; }}
+.iconic-pause()       				{ .iconic(); &:before { content: "\e049"; }}
+.iconic-bolt()       				{ .iconic(); &:before { content: "\26a1"; }}
+.iconic-article()       			{ .iconic(); &:before { content: "\e053"; }}
+.iconic-read_more()       			{ .iconic(); &:before { content: "\e054"; }}
+.iconic-beaker()       				{ .iconic(); &:before { content: "\e023"; }}
+.iconic-beaker_alt()       			{ .iconic(); &:before { content: "\e010"; }}
+.iconic-battery_full()       		{ .iconic(); &:before { content: "\e073"; }}
+.iconic-arrow_right()       		{ .iconic(); &:before { content: "\2192"; }}
+.iconic-iphone()       				{ .iconic(); &:before { content: "\e06e"; }}
+.iconic-arrow_up_alt2()       		{ .iconic(); &:before { content: "\e018"; }}
+.iconic-cog()       				{ .iconic(); &:before { content: "\2699"; }}
+.iconic-award_fill()       			{ .iconic(); &:before { content: "\e022"; }}
+.iconic-first()       				{ .iconic(); &:before { content: "\e04c"; }}
+.iconic-trash_fill()       			{ .iconic(); &:before { content: "\e05a"; }}
+.iconic-image()       				{ .iconic(); &:before { content: "\e027"; }}
+.iconic-comment_alt1_fill()       	{ .iconic(); &:before { content: "\e003"; }}
+.iconic-cd()       					{ .iconic(); &:before { content: "\e064"; }}
+.iconic-right_quote()       		{ .iconic(); &:before { content: "\275e"; }}
+.iconic-brush()       				{ .iconic(); &:before { content: "\e01b"; }}
+.iconic-cloud()       				{ .iconic(); &:before { content: "\2601"; }}
+.iconic-eye()       				{ .iconic(); &:before { content: "\e025"; }}
+.iconic-play_alt()       			{ .iconic(); &:before { content: "\e048"; }}
+.iconic-transfer()       			{ .iconic(); &:before { content: "\e041"; }}
+.iconic-pen_alt2()       			{ .iconic(); &:before { content: "\e006"; }}
+.iconic-camera()       				{ .iconic(); &:before { content: "\e070"; }}
+.iconic-move_horizontal_alt2()      { .iconic(); &:before { content: "\e03a"; }}
+.iconic-curved_arrow()      		{ .iconic(); &:before { content: "\2935"; }}
+.iconic-move_horizontal_alt1()      { .iconic(); &:before { content: "\e039"; }}
+.iconic-aperture()      			{ .iconic(); &:before { content: "\e026"; }}
+.iconic-reload_alt()      			{ .iconic(); &:before { content: "\e031"; }}
+.iconic-magnifying_glass()      	{ .iconic(); &:before { content: "\e074"; }}
+.iconic-calendar_alt_fill()      	{ .iconic(); &:before { content: "\e06c"; }}
+.iconic-fork()      				{ .iconic(); &:before { content: "\e046"; }}
+.iconic-box()      					{ .iconic(); &:before { content: "\e06b"; }}
+.iconic-map_pin_fill()      		{ .iconic(); &:before { content: "\e068"; }}
+.iconic-bars_alt()      			{ .iconic(); &:before { content: "\e00a"; }}
+.iconic-volume()      				{ .iconic(); &:before { content: "\e072"; }}
+.iconic-x_alt()      				{ .iconic(); &:before { content: "\2714"; }}
+.iconic-link()      				{ .iconic(); &:before { content: "\e077"; }}
+.iconic-move_vertical()      		{ .iconic(); &:before { content: "\e03b"; }}
+.iconic-eyedropper()      			{ .iconic(); &:before { content: "\e01e"; }}
+.iconic-spin()      				{ .iconic(); &:before { content: "\e036"; }}
+.iconic-rss()      					{ .iconic(); &:before { content: "\e02c"; }}
+.iconic-info()      				{ .iconic(); &:before { content: "\2139"; }}
+.iconic-target()      				{ .iconic(); &:before { content: "\e02a"; }}
+.iconic-cursor()      				{ .iconic(); &:before { content: "\e057"; }}
+.iconic-key_fill()      			{ .iconic(); &:before { content: "\26bf"; }}
+.iconic-minus()      				{ .iconic(); &:before { content: "\2796"; }}
+.iconic-book_alt()      			{ .iconic(); &:before { content: "\e00b"; }}
+.iconic-headphones()      			{ .iconic(); &:before { content: "\e061"; }}
+.iconic-hash()      				{ .iconic(); &:before { content: "\0023"; }}
+.iconic-arrow_left_alt1()      		{ .iconic(); &:before { content: "\e013"; }}
+.iconic-arrow_left_alt2()      		{ .iconic(); &:before { content: "\e017"; }}
+.iconic-fullscreen_exit()      		{ .iconic(); &:before { content: "\e050"; }}
+.iconic-share()      				{ .iconic(); &:before { content: "\e02e"; }}
+.iconic-fullscreen_alt()      		{ .iconic(); &:before { content: "\e04f"; }}
+.iconic-comment_alt2_fill()      	{ .iconic(); &:before { content: "\e004"; }}
+.iconic-moon_fill()      			{ .iconic(); &:before { content: "\263e"; }}
+.iconic-at()      					{ .iconic(); &:before { content: "\0040"; }}
+.iconic-chat()      				{ .iconic(); &:before { content: "\e05e"; }}
+.iconic-move_vertical_alt2()      	{ .iconic(); &:before { content: "\e03d"; }}
+.iconic-move_vertical_alt1()      	{ .iconic(); &:before { content: "\e03c"; }}
+.iconic-check()      				{ .iconic(); &:before { content: "\2717"; }}
+.iconic-mic()      					{ .iconic(); &:before { content: "\e05f"; }}
+.iconic-book()      				{ .iconic(); &:before { content: "\e069"; }}
+.iconic-move_alt1()      			{ .iconic(); &:before { content: "\e03f"; }}
+.iconic-move_alt2()      			{ .iconic(); &:before { content: "\e040"; }}
+.iconic-document_fill()      		{ .iconic(); &:before { content: "\e066"; }}
+.iconic-plus()      				{ .iconic(); &:before { content: "\2795"; }}
+.iconic-wrench()      				{ .iconic(); &:before { content: "\e078"; }}
+.iconic-play()      				{ .iconic(); &:before { content: "\e047"; }}
+.iconic-star()      				{ .iconic(); &:before { content: "\2605"; }}
+.iconic-document_alt_fill()      	{ .iconic(); &:before { content: "\e000"; }}
+.iconic-chart()      				{ .iconic(); &:before { content: "\e028"; }}
+.iconic-rain()      				{ .iconic(); &:before { content: "\26c6"; }}
+.iconic-folder_fill()      			{ .iconic(); &:before { content: "\e065"; }}
+.iconic-new_window()      			{ .iconic(); &:before { content: "\e059"; }}
+.iconic-user()      				{ .iconic(); &:before { content: "\e062"; }}
+.iconic-battery_half()      		{ .iconic(); &:before { content: "\e05b"; }}
+.iconic-aperture_alt()      		{ .iconic(); &:before { content: "\e00c"; }}
+.iconic-eject()      				{ .iconic(); &:before { content: "\e04b"; }}
+.iconic-arrow_down_alt1()      		{ .iconic(); &:before { content: "\e016"; }}
+.iconic-pilcrow()      				{ .iconic(); &:before { content: "\00b6"; }}
+.iconic-arrow_down_alt2()      		{ .iconic(); &:before { content: "\e01a"; }}
+.iconic-arrow_right_alt1()      	{ .iconic(); &:before { content: "\e015"; }}
+.iconic-arrow_right_alt2()      	{ .iconic(); &:before { content: "\e019"; }}
+.iconic-rss_alt()      				{ .iconic(); &:before { content: "\e02d"; }}
+.iconic-spin_alt()      			{ .iconic(); &:before { content: "\e037"; }}
+.iconic-sun_fill()      			{ .iconic(); &:before { content: "\2600"; }}

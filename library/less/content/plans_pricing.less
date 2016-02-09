@@ -1,0 +1,167 @@
+/******************************************************************************
+Site Name: WAXWINGLEGAL.COM
+Author: BOSWORTH
+
+Stylesheet: Plans & Pricing
+******************************************************************************/
+
+///////////////////////////////////////////////////////////////////////////////
+//  MIXINS
+///////////////////////////////////////////////////////////////////////////////
+
+@import "../_mixins.less";
+@import "../icons/font-awesome/font-awesome_mixins.less";
+@import "../icons/iconic-fill/iconic-fill_mixins.less";
+
+/*********************
+PRICING BANNER
+*********************/
+
+
+#plans-pricing{
+	margin-bottom:120px;
+}
+
+.plans-pricing{
+	background-color: #DBDBDB;
+	padding-bottom:40px;
+	.extend();
+
+	@media @query-tablet{
+		background: transparent url("@{img_dir}banners/cityscape.1920x600.jpg") no-repeat center top;
+		padding-bottom:0;
+	}
+}
+
+.intro{
+	padding:80px 20px 60px 20px;
+	text-align: center;
+
+	.inner{
+		.header{
+			color:@font-secondary;
+			font-weight: 500;
+			font-size:62px;
+			line-height: 1em;
+			.text-shadow(2px,2px,0,#fff);
+			margin:0;	
+		}
+		.subtext{
+			color:@font-dark;
+			margin:0;
+			font-weight: 700;
+			.text-shadow(0px,1px,0,#fff);
+		}
+	}
+}
+
+
+.plans{
+
+	.plan{
+		.colorbox(light, 0);
+		text-align: center;
+		margin-bottom:40px;
+
+		@media @query-tablet{
+			margin-bottom:10px;
+		}
+
+		.pricing-header{
+			.colorbox(secondary);
+			overflow: hidden;
+
+			.header{
+				color:@color-lightest;
+				font-size: 32px;
+				margin:0;
+				position:relative;
+				z-index: 2;
+			}
+
+			.watermark{
+				.watermark(white);
+				left: -70px;
+				top: -1px;
+			}
+
+		} //.pricing-header
+
+
+		.featured-price{
+			margin:20px;
+
+		} //.featured-price
+
+		.summary{
+			margin:20px;
+			padding:20px;
+			border-top:2px solid @color-primary;
+			border-bottom:2px solid @color-primary;
+			min-height:100px;
+
+			.quote{ color: @color-mid;}
+		} //.header
+
+		.click{
+			min-height:100px;
+			.button{margin-top:5%;}
+		} //.click
+
+		.feature-list{
+			
+		 	.features{
+		 		margin:0;
+		 		padding:0;
+
+		 		.feature{
+		 			padding:15px;
+		 			background-color: lighten(@color-lighter, 1%);
+		 			border-top:1px solid @color-mid;
+
+		 			&:last-child{
+		 				border-bottom:1px solid @color-mid;
+		 			}
+		 		}
+		 	}
+
+		} //.feature-list
+
+		 .final-word{
+		 	padding:25px;
+		 	color:@font-lighter;
+		 	overflow: hidden;
+		 	background-color: lighten(@color-dark, 5%);
+		 	min-height:200px;
+
+		 	.arrow{
+		 		position:absolute;
+		 		bottom:10px;
+		 		right:10px;
+		 		z-index: 2;
+		 	}
+
+		 	.watermark{
+				.watermark(white);
+				right: -62px;
+				bottom: -27px;
+			}
+
+		} // .final-word
+
+	}
+
+}
+
+
+#faqs{
+
+}
+
+.question{
+	margin-bottom:40px;
+
+	.title{
+		color:@font-primary
+	}
+}

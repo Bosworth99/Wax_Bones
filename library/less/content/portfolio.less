@@ -1,0 +1,104 @@
+/******************************************************************************
+Site Name: WAXWINGLEGAL.COM
+Author: BOSWORTH
+
+Stylesheet: Portfolio
+******************************************************************************/
+
+///////////////////////////////////////////////////////////////////////////////
+//  MIXINS
+///////////////////////////////////////////////////////////////////////////////
+
+@import "../_mixins.less";
+@import "../icons/font-awesome/font-awesome_mixins.less";
+@import "../icons/iconic-fill/iconic-fill_mixins.less";
+
+
+/*********************
+Portfolio BANNER
+*********************/
+
+#Portfolio-intro{}
+
+#marquee{
+	margin-top:0;
+	background-color: @color-secondary;
+
+	@media @query-tablet{
+		background: transparent url("@{img_dir}banners/court_sky.1920x600.jpg") no-repeat center top;
+	}
+
+	.big-idea{
+		.header{
+			color:@font-lightest;
+			.text-shadow(0,2px,2px,rgba(50,50,50,.4));
+		}
+	} //.big-idea
+
+	.callout{
+
+		.button{
+			position: relative;
+			top:5px;
+			left:-5px;
+		}
+	}
+}
+
+
+#Portfolio{}
+#examples{}
+
+#themes{
+	@media @query-tablet{
+		border-left:1px dotted @color-secondary-lo;
+		padding-left:20px;	
+	}
+}
+
+.themes-examples{
+
+	header {
+		.header{}
+	}
+
+	.examples{
+		text-align: center;
+		
+		.example{
+			.details{}
+			.graphic{
+				display:inline-block;
+				margin:0 auto;
+				.transition();
+				.opacity(.8);
+			}
+
+			&:hover .graphic{
+				.opacity(1);
+			}
+		}
+	}
+
+	.themes{
+		text-align: center;
+
+		@media @query-tablet{
+			text-align: left;
+		}
+
+		.theme{
+			.details{}
+			.graphic{
+				.transition();
+				.opacity(.8);				
+				display:inline-block;
+				margin:0 auto;
+			}
+			&:hover .graphic{
+				.opacity(1);
+			}
+		}
+	}
+
+}

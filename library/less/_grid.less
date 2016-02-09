@@ -1,0 +1,219 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//	AUTHOR 	- josh@joshbosworth.com
+//	DATE	- 1/2014
+//	COMMENT	- define scaffolding, rows and columns, and responsive variations
+//				
+///////////////////////////////////////////////////////////////////////////////
+
+
+html {
+	height:100%;
+	width:100%;}
+body {
+	height:100%;
+	width:100%;
+}
+
+.page-wrapper { position:relative; z-index:10; }
+.fixed { position:fixed; top:0; height:0; left:0; z-index:999; width:100%; }
+
+/*		Base Mobile Layout: < 480px.
+		Stack columns up and apply a healthy margin.
+------------------------------------------------------------ */
+
+body { min-width:100%; }
+
+.scaffold {clear:both;float:left;overflow:hidden;position:relative;width:100%;}
+.container {width:100%; position:relative;}
+.row { width:100%; min-width:280px; max-width: none; margin-left:auto; margin-right:auto; position:relative; }
+
+.container [class*='column_'],
+.container [class*='col_'] {
+	float:none;
+	display:block;
+	margin-right:20px;
+	margin-left:20px;
+	min-height: 1px;
+	position:relative;
+}
+
+/*		LARGER MOBILE DEVICES: 480px.
+		Fix row width for that awkward intermediate stage
+------------------------------------------------------------ */
+
+@media @query-mobile {
+	.row { max-width:580px; }
+}
+
+/*		TABLET & SMALLER LAPTOPS: 768px 
+		Fluid columns up to 1039 px 
+----------------------------------------------------------------------------------------------------
+cols    1     	2      	3      	4      	5      	6      	7      	8      	9      	10 		11 		12
+		44px 	108px	172px	236px	300px	364px	428px	492px	556px	620px	684px	748px */
+
+@media @query-tablet {
+
+	body { min-width:748px; max-width: 1039px; }
+	.row { min-width:748px; max-width: 1039px; .type-transition(width);}	
+
+	.container [class*='column_'] {
+		float:left;
+		display:inline;
+		margin-right:0;
+		margin-left:3%;
+	}
+
+	.container .row [class*='column_']:first-child,
+	.container .first {
+		margin-left:.5%;
+	}
+
+	.container .row [class*='column_']:last-child,
+	.container .last {
+		margin-right: .5%;
+	}
+
+	.container .column_1{width:5.5%;}
+	.container .column_2{width:14%;}
+	.container .column_3{width:22.5%;}
+	.container .column_4{width:31%;}
+	.container .column_5{width:39.5%;}
+	.container .column_6{width:48%;}
+	.container .column_7{width:56.5%;}
+	.container .column_8{width:65%;}
+	.container .column_9{width:73.5%;}
+	.container .column_10{width:82%;}
+	.container .column_11{width:90.5%;}
+	.container .column_12{width:99%;}
+
+
+	// simple width-based cols, esp for use within columns
+	.container [class*='col_'] {
+		float:left;
+		display:inline;
+		margin-right:0;
+		margin-left:3%;
+	}
+
+	.container .row [class*='col_']:first-child,
+	.container .first {
+		margin-left:.5%;
+	}
+
+	.container .row [class*='col_']:last-child,
+	.container .last {
+		margin-right: .5%;
+	}
+
+	.container .col_fourth{width:22.5%;}	
+	.container .col_third{width:31%;}	
+	.container .col_half{width:48%;}	
+	.container .col_twothird{width:65%;}	
+	.container .col_threefourth{width:73.5%;}	
+	.container .col_full{width:99%;}	
+
+}
+
+
+/*		LARGE VIEWING SIZE: 1040px
+		- fixed column widths from here on out
+----------------------------------------------------------------------------------------------------
+cols    1     	2      	3      	4      	5      	6      	7      	8      	9      	10 		11 		12
+		80px 	180px	280px	380px	480px	580px	680px	780px	880px	980px	1080px	1180px  */
+
+
+@media @query-desktop {
+	
+	body { min-width:1020px; max-width: none;}
+	.row { width: 1020px; min-width:none; max-width: none; .type-transition(width);}	
+
+	.container [class*='column_'] {
+		margin-left:20px;
+		.type-transition(width);
+	}
+
+	.container .row [class*='column_']:first-child,
+	.container .first {
+		margin-left: 0px;
+	}
+
+	.container .row [class*='column_']:last-child,
+	.container .last {
+		margin-right: 0px;
+	}
+
+	.container .column_1{width:65px}
+	.container .column_2{width:150px}
+	.container .column_3{width:235px}
+	.container .column_4{width:320px}
+	.container .column_5{width:405px}
+	.container .column_6{width:490px}
+	.container .column_7{width:575px}
+	.container .column_8{width:660px}
+	.container .column_9{width:745px}
+	.container .column_10{width:830px}
+	.container .column_11{width:915px}
+	.container .column_12{width:1020px}
+}
+
+
+/*		LARGE VIEWING SIZE: 1248px
+----------------------------------------------------------------------------------------------------
+cols    1     	2      	3      	4      	5      	6      	7      	8      	9      	10 		11 		12
+		80px 	180px	280px	380px	480px	580px	680px	780px	880px	980px	1080px	1180px  */
+
+
+@media @query-widescreen {
+	
+	body { min-width:1228px;}
+	.row {width: 1228px; .type-transition(width);}	
+
+	.container .column_1{width:84px}
+	.container .column_2{width:188px}
+	.container .column_3{width:292px}
+	.container .column_4{width:396px}
+	.container .column_5{width:500px}
+	.container .column_6{width:604px}
+	.container .column_7{width:708px}
+	.container .column_8{width:812px}
+	.container .column_9{width:916px}
+	.container .column_10{width:1020px}
+	.container .column_11{width:1124px}
+	.container .column_12{width:1228px}
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*	Clearing
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* scaffold clears*/
+.clearfix:after,
+.scaffold:after,
+.container:after,
+.row:after{
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+.clearfix:after,
+.row:after{
+  clear: both; }
+
+.clearfix,
+.scaffold,
+.container,
+.row{ zoom: 1; }
+
+/* <br class="clear" /> */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;}

@@ -1,0 +1,127 @@
+/******************************************************************************
+Site Name: WAXWINGLEGAL.COM
+Author: BOSWORTH
+
+Stylesheet: Featured-Articles
+******************************************************************************/
+
+///////////////////////////////////////////////////////////////////////////////
+//  MIXINS
+///////////////////////////////////////////////////////////////////////////////
+
+@import "../_mixins.less";
+@import "../icons/font-awesome/font-awesome_mixins.less";
+@import "../icons/iconic-fill/iconic-fill_mixins.less";
+
+
+/*********************
+MARQUEE
+*********************/
+
+#featured-articles-header {}
+#marquee{
+	margin-top:0;
+
+	@media @query-tablet{
+		background: transparent url("@{img_dir}banners/legal_library.1920x600.jpg") no-repeat center top;
+	}
+
+	.big-idea .header{
+		color:@font-primary-lo;
+
+		@media @query-tablet{
+			color:@font-lightest;
+		}
+	}
+}
+
+/*********************
+ARTICLES
+*********************/
+
+#featured-articles {}
+
+.articles{
+	.article-row{
+		clear:both;
+	}
+
+	.article{
+		.wrap{
+			.colorbox(light,20px);
+			margin-bottom:20px;
+			min-height: 300px;
+			
+			.entry-header{
+				.title{
+					color:@font-secondary;
+					font-size:26px;
+					line-height: 1.2em;
+					margin:0;
+				}
+				.date {color:@font-mid;}
+				.comments {
+					margin-left:5px;
+					&:before{ color:@font-secondary; font-size:16px; }
+				}
+
+			}
+
+			.entry-body{
+				p{font-size:14px;}
+			}
+
+			.entry-footer{
+				.button{
+					position: absolute;
+					bottom:10px;
+					right:10px;
+				}
+			}
+		}
+	}
+}
+
+.continue-reading{
+	.colorbox(light);
+	overflow: visible;
+	h2{
+		margin:0;
+		text-align: center;
+		a {}
+	}
+
+	&:hover{
+		background-color: @color-primary;
+		a { color:@color-lightest; }
+	}
+}
+
+
+/*Array
+(
+    [0] => ID
+    [1] => post_author
+    [2] => post_date
+    [3] => post_date_gmt
+    [4] => post_content
+    [5] => post_title
+    [6] => post_excerpt
+    [7] => post_status
+    [8] => comment_status
+    [9] => ping_status
+    [10] => post_password
+    [11] => post_name
+    [12] => to_ping
+    [13] => pinged
+    [14] => post_modified
+    [15] => post_modified_gmt
+    [16] => post_content_filtered
+    [17] => post_parent
+    [18] => guid
+    [19] => menu_order
+    [20] => post_type
+    [21] => post_mime_type
+    [22] => comment_count
+    [23] => filter
+)*/

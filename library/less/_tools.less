@@ -1,0 +1,102 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//	AUTHOR 	- josh@joshbosworth.com
+//	DATE	- 1/2014
+//	COMMENT	- CSS TOOLS
+//				
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+//  TOOLS
+///////////////////////////////////////////////////////////////////////////////
+
+// BORDER-BOX ALL THE THINGS! (http://paulirish.com/2012/box-sizing-border-box-ftw/)
+* { 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing:    border-box; 
+  box-sizing:         border-box; 
+}
+
+// FLOATS
+.pull-left,
+.align-left{float:left;}
+
+.align-right,
+.pull-right{float:right;}
+
+// TEXT ALIGN
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+
+// CLEARFIX
+.clearfix {
+    zoom: 1;
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+}
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ 
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// visually extend elements horizontally
+.extend{
+  .extend();
+}
+
+// Hide for both screenreaders and browsers://
+.hidden { display:none;visibility:hidden}
+// Hide only visually,but have it available for screenreaders://
+.visuallyhidden { border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
+// Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard//
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus { clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}
+// Hide visually and from screenreaders,but maintain layout //
+.invisible { visibility:hidden}
+
+///////////////////////////////////////////////////////////////////////////////
+//  PREFABS
+///////////////////////////////////////////////////////////////////////////////
+
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif;
+  font-style: italic;
+}
+
+// alerts and notices
+.alert {
+	margin: 10px;
+	padding: 5px 18px;
+	border: 1px solid;
+}
+
+.alert-help {
+  .alert();
+	border-color: darken(@alert-yellow, 5%);
+	background: @alert-blue;
+}
+
+.alert-info {
+  .alert();
+	border-color: darken(@alert-blue, 5%);
+	background: @alert-blue;
+}
+
+.alert-error {
+  .alert();
+	border-color: darken(@alert-red, 5%);
+	background: @alert-red;
+}
+
+.alert-success {
+  .alert();
+	border-color: darken(@alert-green, 5%);
+	background: @alert-green;
+}
